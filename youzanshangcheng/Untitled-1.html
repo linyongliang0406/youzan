@@ -52,6 +52,43 @@
             line-height: 13px;
             margin: 0px 0px 0px 0px;
         }
+
+        .nav-list{
+            float: right;
+            zoom: 1;
+        }
+
+        .current-highlight{
+            text-decoration: none;
+            color: #FF4444 !important;
+        }
+
+        .caret-margin{
+            z-index: 200;
+            margin-right: 16px;
+        }
+
+        .product-center{
+            text-decoration: none;
+            color: #2c3a46;
+        }
+
+        .caret{
+            position: relative;
+            display: inline-block;
+        }
+
+        .caret:before{
+            border-top-color: #ffffff;
+            top: -9px;
+            z-index: 2;
+        }
+
+        .caret:after{
+            border-top-color: #333;
+            top: -7px;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -62,6 +99,45 @@
                 <p class ="nav-link">香港上市代码</p>
                 <p class ="nav-link">08083.HK</p>
             </div>
+            <ul id="nav_list_common_" class="nav-list">
+                <li>
+                    <a href="https://www.youzan.com/" class="current-highlight">首页</a>
+                </li>
+                <li class="caret-margin">
+                    <a href="javascript:;" class="product-center">
+                        商家服务
+                        <i class="caret">
+                       
+                        </i>
+                    </a>
+                </li>
+                <li class="caret-margin">
+                    <a href="javascript:;" class="product-center">
+                        消费者
+                    </a>
+                </li>
+                <li >
+                    <a href="https://www.youzan.com/intro/qudao" class="product-center">
+                        渠道合作
+                    </a>
+                </li>
+                <li class="caret-margin">
+                    <a href="javascript:;" class="product-center">
+                        有赞云
+                    </a>
+                </li>
+                <li class="caret-margin">
+                    <a href="javascript:;" class="product-center">
+                        更多服务
+                    </a>
+                </li>
+                <li class="last login_commom_">
+                    <a target="_blank" class="btn-login" href="https://account.youzan.com/login">登录</a>
+                </li>
+                <li class="last register_common_">
+                    <a target="_blank" id="yz_register_" class="btn-register_" href="https://account.youzan.com/register">注册</a>
+                </li>
+            </ul>
 
         </div>
     </div>
