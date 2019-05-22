@@ -27,6 +27,7 @@
         }
 
         .logo{
+            margin-left: -30px;
             display: inline-block;
             width: 72px;
             height: 25px;
@@ -47,95 +48,119 @@
             width: 78px;
             color: #999;
             font-size: 10px;
-            font-family: 'PingFang SC';
             font-weight: 300;
             line-height: 13px;
-            margin: 0px 0px 0px 0px;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
         }
 
         .nav-list{
             float: right;
             zoom: 1;
+            margin: 0px;
         }
 
         .current-highlight{
             text-decoration: none;
-            color: #FF4444 !important;
+            color: #FF4444;
+
         }
 
-        .caret-margin{
+        .margin{
             z-index: 200;
             margin-right: 16px;
+            margin-top: -50px;
+            text-align: center;
+            float: left;
+            list-style: none;
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+            padding: 0px 20px;
         }
 
-        .product-center{
+        .product{
             text-decoration: none;
             color: #2c3a46;
         }
 
-        .caret{
-            position: relative;
+        .login{
+            margin-top: -50px;
+            padding: 0px 0px 0px 20px;
+            float: left;
             display: inline-block;
+            height: 70px;
+            line-height: 70px;
         }
 
-        .caret:before{
-            border-top-color: #ffffff;
-            top: -9px;
-            z-index: 2;
+        .btn-login{
+            width: 80px;
+            height: 30px;
+            line-height: 28px;
+            display: inline-block;
+            border: 1px solid #2B90ED;
+            color: #2B90ED;
+            text-align: center;
+            border-radius: 2px;
+            box-sizing: border-box;
+            cursor: pointer;
         }
 
-        .caret:after{
-            border-top-color: #333;
-            top: -7px;
-            z-index: 1;
+        .register{
+            margin-top: -50px;
+            padding: 0px 0px 0px 10px;
+            float: left;
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+        }
+
+        .btn-register_{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            background-color: #2B90ED;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="top">
         <div class="left">
-            <a class="logo" href="https://www.youzan.com/"></a>
+            <a class="logo"></a>
             <div class="nav-link-cont">
                 <p class ="nav-link">香港上市代码</p>
                 <p class ="nav-link">08083.HK</p>
             </div>
-            <ul id="nav_list_common_" class="nav-list">
-                <li>
-                    <a href="https://www.youzan.com/" class="current-highlight">首页</a>
+            <ul class="nav-list">
+                <li class="margin">
+                    <a class="current-highlight">首页</a>
                 </li>
-                <li class="caret-margin">
-                    <a href="javascript:;" class="product-center">
-                        商家服务
-                        <i class="caret">
-                       
-                        </i>
-                    </a>
+                <li class="margin">
+                    <a class="product">商家服务</a>
                 </li>
-                <li class="caret-margin">
-                    <a href="javascript:;" class="product-center">
-                        消费者
-                    </a>
+                <li class="margin">
+                    <a class="product">消费者</a>
                 </li>
-                <li >
-                    <a href="https://www.youzan.com/intro/qudao" class="product-center">
-                        渠道合作
-                    </a>
+                <li class="margin">
+                    <a class="product">渠道合作</a>
                 </li>
-                <li class="caret-margin">
-                    <a href="javascript:;" class="product-center">
-                        有赞云
-                    </a>
+                <li class="margin">
+                    <a class="product">有赞云</a>
                 </li>
-                <li class="caret-margin">
-                    <a href="javascript:;" class="product-center">
-                        更多服务
-                    </a>
+                <li class="margin">
+                    <a class="product">更多服务</a>
                 </li>
-                <li class="last login_commom_">
-                    <a target="_blank" class="btn-login" href="https://account.youzan.com/login">登录</a>
+                <li class="login">
+                    <a class="btn-login">登录</a>
                 </li>
-                <li class="last register_common_">
-                    <a target="_blank" id="yz_register_" class="btn-register_" href="https://account.youzan.com/register">注册</a>
+                <li class="register">
+                    <a class="btn-register_">注册</a>
                 </li>
             </ul>
 
