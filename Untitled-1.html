@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .top{
+            min-width: 1100px;
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ededed;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+            z-index: 200;
+            transition: all 0.5s ease-in;
+        }
+
+        .left{
+            width: 1000px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            height: 70px;
+            zoom: 1;
+        }
+
+        .logo{
+            margin-left: -30px;
+            display: inline-block;
+            width: 72px;
+            height: 25px;
+            margin-top: 22.5px;
+            background-size: 72px 25px;
+            background-image: url(youzan.png);
+        }
+
+        .nav-link-cont{
+            display: inline-block;
+            width: 60px;
+            margin-left: 10px;
+            margin-bottom: -1px;
+        }
+
+        .nav-link{
+            float: left;
+            width: 78px;
+            color: #999;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 13px;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        .nav-list{
+            float: right;
+            zoom: 1;
+            margin: 0px;
+        }
+
+        .current-highlight{
+            text-decoration: none;
+            color: #FF4444;
+
+        }
+
+        .margin{
+            z-index: 200;
+            margin-right: 0px;
+            margin-top: 0px;
+            text-align: center;
+            float: left;
+            list-style: none;
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+            padding: 0px 20px;
+            cursor: pointer;
+        }
+
+
+        .product{
+            text-decoration: none;
+            color: #2c3a46;
+            cursor: pointer;
+        }
+
+        .product:hover{
+            color: red;
+        }
+
+        .caret{
+            position: relative;
+            display: inline-block;
+            background-image: url(jianto.png);
+        }
+
+
+        .caret:after,   .caret:before {
+            content: ' ';
+            height: 0;
+            width: 0;
+            top: 100px;
+            position: absolute;
+            left: 5px;
+            border: 5px solid transparent; 
+            }
+        .left .caret:before {
+            border-top-color: #ffffff;
+            top: -9px;
+            z-index: 2; 
+            }
+        .left .caret:after {
+            border-top-color: #333;
+            top: -7px;
+            z-index: 1; 
+            }
+
+        .login{
+            margin-top: 0px;
+            padding: 0px 0px 0px 20px;
+            float: left;
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+        }
+
+        .btn-login{
+            width: 80px;
+            height: 30px;
+            line-height: 28px;
+            display: inline-block;
+            border: 1px solid #2B90ED;
+            color: #2B90ED;
+            text-align: center;
+            border-radius: 2px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .btn-login:hover{
+            background-color: #2B90ED;
+            color: #ffffff;
+        }
+
+        .register{
+            margin-top: 0px;
+            padding: 0px 0px 0px 10px;
+            float: left;
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+        }
+
+        .btn-register_{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            background-color: #2B90ED;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .btn-register_:hover{
+            background-color: rgb(102, 181, 255)
+        }
+
+        .banner{
+            height: 420px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        .swiper{
+            background-image: url(youzan1.jpg);
+            position: absolute;
+            width: 1580px;
+            height: 420px;
+            background-size: cover;
+            background-position: 100%;
+
+        }
+
+        .swiper-wrapper{
+            position: absolute;
+            width: 1100px;
+            height:420px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .h3{
+        margin-top: 100px;
+        display: block;
+        font-size: 2.53em;
+        }
+        .h31{
+        font-size: 20px;
+        color: #777;
+        margin-bottom: 55px;
+        }
+        .button{
+        width: 160px;
+        height: 40px;
+        line-height: 18px;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        background: #38f;
+        padding: 12px 42px;
+        color: #fff;
+        cursor: pointer;
+        }
+        .font{
+        font-size: 14px;
+        color: #777;
+        margin-top: 15px;
+        display: block;
+        }
+
+        .no-visual{
+            width: 1000px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .prev{
+            position: absolute;
+            top: 190px;
+            right: 1030px;
+            left: -190px;
+            width: 60px;
+            height: 60px;
+            background-size: 100% 100%;
+            background-image: url(L.png);
+            cursor: pointer;
+        }
+
+        .next{
+            position: absolute;
+            top: 190px;
+            left: 1030px;
+            right: 500px;
+            width: 60px;
+            height: 60px;
+            background-size: 100% 100%;
+            background-image: url(R.png);
+            cursor: pointer;
+        }
+
+        .main{
+            height: 620px;   
+        }
+
+        .wcard-container{
+            min-width: 1005px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            zoom: 1;
+        }
+
+        .h1{
+            font-size: 28px;
+            color: #333;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 40px;
+            padding-top: 90px;
+        }
+
+        .wcard-content{
+            display: flex;
+            margin-top: -430px;
+            margin-left: 200px;
+        }
+
+        .wcard-left{
+            flex: 1;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+        }
+
+        .section{
+            margin-bottom: 28px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+
+        }
+
+        .sectitle{
+            color: #333;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 0;
+        }
+
+        .secsummary{
+            margin-top: 5px;
+            font-size: 14px;
+            color: #999;
+            letter-spacing: 0;
+            line-height: 24px;
+
+           
+
+
+        }
+
+        .bt-blue{
+            margin-right: 15px;
+            background-color: #38f;
+            color: #fff;
+            font-size: 14px;
+            padding: 10px 42px;
+            border-radius: 2px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bt-blue-outline{
+            margin-left: 15px;
+            border: 1px solid #38f;
+            color: #38f;
+            padding: 9px 42px;
+            font-size: 14px;
+            border-radius: 2px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .wcard-right{
+            width: 615px;
+        }
+
+        .img{
+            background-size: 100% 100%;
+            background-image: url(youzan2.png);
+            width: 615px;
+            height: 439px;
+            position: absolute;
+            top: 700px;
+            left: 680px;
+        }
+
+        .yz-resolutions{
+            overflow: hidden;
+            min-width: 1005px;
+            max-width: 1100px;
+            height: 790px;
+            margin: 0 auto;
+            position: relative;
+            zoom: 1;
+        }
+
+        .h2{
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            line-height: 40px;
+            padding-top: 90px;
+        }
+
+        .rescontent{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .resolution-card{
+            cursor: pointer;
+            width: 256px;
+            height: 256px;
+            border: 1px solid #e5e5e5;
+            border-radius: 2px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            transition: .5s;
+        }
+
+        .ccover{
+            height: 169px;
+            width: 100%;
+            position: relative;
+        }
+
+        .icon{
+            background-size: 100% 100%;
+            background-image: url(icon.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .csummary{
+            padding: 10px 0;
+            width: 100%;
+            height: 92px;
+            text-align: center;
+            line-height: 36px;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        .p{
+            margin-top: 4px;
+            font-size: 20px;
+        }
+
+
+        .a{
+            position: absolute;
+            margin-top: -2px;
+            margin-left: -25px;
+            font-size: 12px;
+            color: #38f;
+            text-decoration: none;
+        }
+
+        .icon1{
+            background-size: 100% 100%;
+            background-image: url(icon1.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back1{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back1.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .icon2{
+            background-size: 100% 100%;
+            background-image: url(icon2.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back2{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back2.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .resolution-card3{
+            position: absolute;
+            top: 178px;
+            right: -11px;
+            cursor: pointer;
+            width: 256px;
+            height: 256px;
+            border: 1px solid #e5e5e5;
+            border-radius: 2px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            transition: .5s;
+        }
+
+        .icon3{
+            background-size: 100% 100%;
+            background-image: url(icon3.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back3{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back3.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .icon4{
+            background-size: 100% 100%;
+            background-image: url(icon4.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back4{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back4.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .icon5{
+            background-size: 100% 100%;
+            background-image: url(icon5.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back5{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back5.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .icon6{
+            background-size: 100% 100%;
+            background-image: url(icon6.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back6{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back6.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .resolution-card7{
+            position: absolute;
+            top: 456.5px;
+            right: -11px;
+            cursor: pointer;
+            width: 256px;
+            height: 256px;
+            border: 1px solid #e5e5e5;
+            border-radius: 2px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            transition: .5s;
+        }
+
+        .icon7{
+            background-size: 100% 100%;
+            background-image: url(icon7.png);
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            left: 98px;
+            top: 54px;
+        }
+
+        .back7{
+            width: 256px;
+            height: 168px;
+            background-size: 100% 100%;
+            background-image: url(back7.png);
+            left: 0px;
+            top: 0px;
+        }
+
+        .use_yz{
+            position: absolute;
+            top:1910px;
+            display:block;
+            height: 734px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            background-color: #f8f8f8;
+        }
+
+        .case-container{
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .img-container{
+            position: absolute;
+            left: 180px;
+            cursor: pointer;
+            width: 355px;
+            height: 300px;
+            border-radius: 2px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            transition: .5s;
+            background-color: #fff;
+        }
+
+        .bg-img{
+            background-image: url(case1.jpg);
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        .bg-logo{
+            position: absolute;
+            top: 190px;
+            left: 30px;
+            width: 118px;
+            height: 22px;
+            background-image: url(logo1.png);
+        }
+
+        .desc{
+            position: absolute;
+            font-size: 14px;
+            color: #666;
+            top: 235px;
+            left: 30px;
+        }
+
+        .img-container2{
+            position: absolute;
+            left: 560px;
+            cursor: pointer;
+            width: 355px;
+            height: 300px;
+            border-radius: 2px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            transition: .5s;
+            background-color: #fff;
+        }
+
+        .bg-img2{
+            background-image: url(case2.jpg);
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        .bg-logo2{
+            position: absolute;
+            top: 190px;
+            left: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 88px;
+            height: 30px;
+            background-image: url(logo2.png);
+        }
+
+        .img-container3{
+            position: absolute;
+            left: 938px;
+            cursor: pointer;
+            width: 355px;
+            height: 300px;
+            border-radius: 2px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            transition: .5s;
+            background-color: #fff;
+        }
+
+        .bg-img3{
+            background-image: url(case3.jpg);
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        .bg-logo3{
+            position: absolute;
+            top: 190px;
+            left: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 88px;
+            height: 30px;
+            background-image: url(logo3.png);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="left">
+            <a class="logo"></a>
+            <div class="nav-link-cont">
+                <p class ="nav-link">香港上市代码</p>
+                <p class ="nav-link">08083.HK</p>
+            </div>
+            <ul class="nav-list">
+                <li class="margin">
+                    <a class="current-highlight">首页</a>
+                </li>
+                <li class="margin">
+                    <a class="product">商家服务
+                        <i class="caret"></i>
+                    </a>
+                </li>
+                <li class="margin">
+                    <a class="product">消费者
+                        <i class="caret"></i>
+                    </a>
+                </li>
+                <li class="margin">
+                    <a class="product">渠道合作</a>
+                </li>
+                <li class="margin">
+                    <a class="product">有赞云
+                        <i class="caret"></i>
+                    </a>
+                </li>
+                <li class="margin">
+                    <a class="product">更多服务
+                        <i class="caret"></i>
+                    </a>
+                </li>
+                <li class="login">
+                    <a class="btn-login">登录</a>
+                </li>
+                <li class="register">
+                    <a class="btn-register_">注册</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                    <a class="h3">有赞微商城</a>
+                    <p class="h31">一个软件解决网上开店所有问题</p>
+                    <a class="button">免费试用</a>
+                    <a class="font">或致电 0571 - 8685 7988</a>
+            </div>
+            <div class="no-visual">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="wcard-container">
+            <div class="h1">有赞微商城 全行业全场景的电商解决方案</div>
+        </div>
+    </div>
+
+    <div class="wcard-content">
+        <div class="wcard-left">
+            <div class="section">
+                <p class="sectitle">3分钟搭建移动商城</p>
+                <p class="secsummary">深挖行业特点 匹配产品功能，提供全行业解决方案</p>
+            </div>
+            <div class="section">
+                <p class="sectitle">近百种营销工具</p>
+                <p class="secsummary">社群营销&节日营销，拉新、转化、复购面面俱到</p>
+            </div>
+            <div class=“section>
+                <p class="sectitle">系统化管理客户</p>
+                <p class="secsummary">客户画像帮您了解客户，会员卡/储值卡实现精准营销</p>
+            </div>
+            <div class="section">
+                <p class="sectitle">分销拓展销售渠道</p>
+                <p class="secsummary">客户帮你卖，员工帮你卖，300万商家帮你卖</p>
+            </div>
+            <div class="section">
+                <a class="bt-blue">免费试用</a>
+                <a class="bt-blue-outline">功能介绍</a>
+            </div>
+        </div>
+
+        <div class="wcard-right">
+            <div class="img"></div>
+        </div>
+    </div>
+
+    <div class="main">
+    <div class="yz-resolutions">
+        <div class="h2">为超过36个行业和场景提供经营解决方案</div>
+        <div class="rescontent">
+
+            <div class="resolution-card">
+                <div class="ccover">
+                    <div class="icon"></div>
+                    <div class="back"></div>
+                </div>
+                <div class="csummary">
+                    <p class="p">小程序</p>
+                    <a class="a">了解更多</a>
+                </div>
+            </div>
+
+            <div class="resolution-card">
+                <div class="ccover">
+                        <div class="icon1"></div>
+                        <div class="back1"></div>
+                </div>
+                <div class="csummary">
+                        <p class="p">知识付费</p>
+                        <a class="a">了解更多</a>
+                    </div>
+            </div>
+
+            <div class="resolution-card">
+                    <div class="ccover">
+                            <div class="icon2"></div>
+                            <div class="back2"></div>
+                    </div>
+                    <div class="csummary">
+                            <p class="p">餐饮外卖</p>
+                            <a class="a">了解更多</a>
+                        </div>
+                </div>
+
+                <div class="resolution-card3">
+                        <div class="ccover">
+                                <div class="icon3"></div>
+                                <div class="back3"></div>
+                        </div>
+                        <div class="csummary">
+                                <p class="p">自媒体</p>
+                                <a class="a">了解更多</a>
+                            </div>
+                    </div>
+
+                    <div class="resolution-card">
+                            <div class="ccover">
+                                    <div class="icon4"></div>
+                                    <div class="back4"></div>
+                            </div>
+                            <div class="csummary">
+                                    <p class="p">票务卡券</p>
+                                    <a class="a">了解更多</a>
+                                </div>
+                        </div>
+
+                        <div class="resolution-card">
+                                <div class="ccover">
+                                        <div class="icon5"></div>
+                                        <div class="back5"></div>
+                                </div>
+                                <div class="csummary">
+                                        <p class="p">酒店客栈</p>
+                                        <a class="a">了解更多</a>
+                                    </div>
+                            </div>
+
+                            <div class="resolution-card">
+                                    <div class="ccover">
+                                            <div class="icon6"></div>
+                                            <div class="back6"></div>
+                                    </div>
+                                    <div class="csummary">
+                                            <p class="p">生鲜果蔬</p>
+                                            <a class="a">查看案例</a>
+                                        </div>
+                                </div>
+
+                                <div class="resolution-card7">
+                                        <div class="ccover">
+                                                <div class="icon7"></div>
+                                                <div class="back7"></div>
+                                        </div>
+                                        <div class="csummary">
+                                                <p class="p">蛋糕烘焙</p>
+                                                <a class="a">查看案例</a>
+                                            </div>
+                                    </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="use_yz">
+            <div class="h2">他们都在用有赞</div>
+           
+                <div class="case-container">
+
+                    <div class="img-container">
+                        <div class="bg-img"></div>
+                        <div class="bg-logo"></div>
+                        <p class="desc">经营类目：亲子自媒体</p>
+                    </div>
+
+                    <div class="img-container2">
+                        <div class="bg-img2"></div>
+                        <div class="bg-logo2"></div>
+                        <p class="desc">经营类目：休闲零食</p>
+                    </div>
+
+                    <div class="img-container3">
+                            <div class="bg-img3"></div>
+                            <div class="bg-logo3"></div>
+                            <p class="desc">经营类目：休闲零食</p>
+                        </div>
+                </div>
+          
+            
+            
+    </div>
+
+    
+</body>
+</html>
