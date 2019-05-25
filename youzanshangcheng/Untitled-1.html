@@ -69,8 +69,8 @@
 
         .margin{
             z-index: 200;
-            margin-right: 16px;
-            margin-top: -50px;
+            margin-right: 0px;
+            margin-top: 0px;
             text-align: center;
             float: left;
             list-style: none;
@@ -81,14 +81,46 @@
             cursor: pointer;
         }
 
+
         .product{
             text-decoration: none;
             color: #2c3a46;
             cursor: pointer;
         }
 
+        .product:hover{
+            color: red;
+        }
+
+        .caret{
+            position: relative;
+            display: inline-block;
+            background-image: url(jianto.png);
+        }
+
+
+        .caret:after,   .caret:before {
+            content: ' ';
+            height: 0;
+            width: 0;
+            top: 100px;
+            position: absolute;
+            left: 5px;
+            border: 5px solid transparent; 
+            }
+        .left .caret:before {
+            border-top-color: #ffffff;
+            top: -9px;
+            z-index: 2; 
+            }
+        .left .caret:after {
+            border-top-color: #333;
+            top: -7px;
+            z-index: 1; 
+            }
+
         .login{
-            margin-top: -50px;
+            margin-top: 0px;
             padding: 0px 0px 0px 20px;
             float: left;
             display: inline-block;
@@ -110,7 +142,7 @@
         }
 
         .register{
-            margin-top: -50px;
+            margin-top: 0px;
             padding: 0px 0px 0px 10px;
             float: left;
             display: inline-block;
@@ -583,6 +615,132 @@
             left: 0px;
             top: 0px;
         }
+
+        .use_yz{
+            position: absolute;
+            top:1910px;
+            display:block;
+            height: 734px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            background-color: #f8f8f8;
+        }
+
+        .case-container{
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .img-container{
+            position: absolute;
+            left: 180px;
+            cursor: pointer;
+            width: 355px;
+            height: 300px;
+            border-radius: 2px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            transition: .5s;
+            background-color: #fff;
+        }
+
+        .bg-img{
+            background-image: url(case1.jpg);
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        .bg-logo{
+            position: absolute;
+            top: 190px;
+            left: 30px;
+            width: 118px;
+            height: 22px;
+            background-image: url(logo1.png);
+        }
+
+        .desc{
+            position: absolute;
+            font-size: 14px;
+            color: #666;
+            top: 235px;
+            left: 30px;
+        }
+
+        .img-container2{
+            position: absolute;
+            left: 560px;
+            cursor: pointer;
+            width: 355px;
+            height: 300px;
+            border-radius: 2px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            transition: .5s;
+            background-color: #fff;
+        }
+
+        .bg-img2{
+            background-image: url(case2.jpg);
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        .bg-logo2{
+            position: absolute;
+            top: 190px;
+            left: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 88px;
+            height: 30px;
+            background-image: url(logo2.png);
+        }
+
+        .img-container3{
+            position: absolute;
+            left: 938px;
+            cursor: pointer;
+            width: 355px;
+            height: 300px;
+            border-radius: 2px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            transition: .5s;
+            background-color: #fff;
+        }
+
+        .bg-img3{
+            background-image: url(case3.jpg);
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: 50%;
+        }
+
+        .bg-logo3{
+            position: absolute;
+            top: 190px;
+            left: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 88px;
+            height: 30px;
+            background-image: url(logo3.png);
+        }
+
     </style>
 </head>
 <body>
@@ -598,19 +756,27 @@
                     <a class="current-highlight">首页</a>
                 </li>
                 <li class="margin">
-                    <a class="product">商家服务</a>
+                    <a class="product">商家服务
+                        <i class="caret"></i>
+                    </a>
                 </li>
                 <li class="margin">
-                    <a class="product">消费者</a>
+                    <a class="product">消费者
+                        <i class="caret"></i>
+                    </a>
                 </li>
                 <li class="margin">
                     <a class="product">渠道合作</a>
                 </li>
                 <li class="margin">
-                    <a class="product">有赞云</a>
+                    <a class="product">有赞云
+                        <i class="caret"></i>
+                    </a>
                 </li>
                 <li class="margin">
-                    <a class="product">更多服务</a>
+                    <a class="product">更多服务
+                        <i class="caret"></i>
+                    </a>
                 </li>
                 <li class="login">
                     <a class="btn-login">登录</a>
@@ -765,10 +931,36 @@
                                                 <a class="a">查看案例</a>
                                             </div>
                                     </div>
-
         </div>
-        
     </div>
+    </div>
+
+    <div class="use_yz">
+            <div class="h2">他们都在用有赞</div>
+           
+                <div class="case-container">
+
+                    <div class="img-container">
+                        <div class="bg-img"></div>
+                        <div class="bg-logo"></div>
+                        <p class="desc">经营类目：亲子自媒体</p>
+                    </div>
+
+                    <div class="img-container2">
+                        <div class="bg-img2"></div>
+                        <div class="bg-logo2"></div>
+                        <p class="desc">经营类目：休闲零食</p>
+                    </div>
+
+                    <div class="img-container3">
+                            <div class="bg-img3"></div>
+                            <div class="bg-logo3"></div>
+                            <p class="desc">经营类目：休闲零食</p>
+                        </div>
+                </div>
+          
+            
+            
     </div>
 
     
