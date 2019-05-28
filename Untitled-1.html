@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>有赞 - 做生意，用有赞</title>
     <style>
         .top{
             min-width: 1100px;
@@ -33,7 +33,7 @@
             height: 25px;
             margin-top: 22.5px;
             background-size: 72px 25px;
-            background-image: url(youzan.png);
+            background-image: url(youzan1.png);
         }
 
         .nav-link-cont{
@@ -98,8 +98,7 @@
             background-image: url(jianto.png);
         }
 
-
-        .caret:after,   .caret:before {
+        .caret:before {
             content: ' ';
             height: 0;
             width: 0;
@@ -108,11 +107,23 @@
             left: 5px;
             border: 5px solid transparent; 
             }
+
+        .caret::after {
+            content: ' ';
+            height: 0;
+            width: 0;
+            top: 100px;
+            position: absolute;
+            left: 5px;
+            border: 5px solid transparent; 
+        }
+
         .left .caret:before {
             border-top-color: #ffffff;
             top: -9px;
             z-index: 2; 
             }
+
         .left .caret:after {
             border-top-color: #333;
             top: -7px;
@@ -183,12 +194,13 @@
         }
 
         .swiper{
-            background-image: url(youzan1.jpg);
             position: absolute;
             width: 1580px;
             height: 420px;
-            background-size: cover;
+            background-size: 100%;
             background-position: 100%;
+            background-image: url(youzan2.jpg);
+            cursor: pointer;
 
         }
 
@@ -201,41 +213,43 @@
             right: 0;
             bottom: 0;
             margin: auto;
+            cursor: pointer;
         }
 
         .h3{
-        margin-top: 100px;
-        display: block;
-        font-size: 2.53em;
+            margin-top: 100px;
+            display: block;
+            font-size: 2.53em;
         }
 
         .h31{
-        font-size: 20px;
-        color: #777;
-        margin-bottom: 55px;
+            font-size: 20px;
+            color: #777;
+            margin-bottom: 55px;
         }
 
         .button{
-        width: 160px;
-        height: 40px;
-        line-height: 18px;
-        display: inline-block;
-        text-align: center;
-        box-sizing: border-box;
-        background: #38f;
-        padding: 12px 42px;
-        color: #fff;
-        cursor: pointer;
+            width: 160px;
+            height: 40px;
+            line-height: 18px;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            background: #38f;
+            padding: 12px 42px;
+            color: #fff;
+            cursor: pointer;
         }
 
         .button:hover{
-            background-color: rgb(35, 117, 224);
+            background-color: rgb(35, 133, 224);
         }
+
         .font{
-        font-size: 14px;
-        color: #777;
-        margin-top: 15px;
-        display: block;
+            font-size: 15px;
+            color: #777;
+            margin-top: 15px;
+            display: block;
         }
 
         .no-visual{
@@ -252,7 +266,6 @@
         .prev{
             position: absolute;
             top: 190px;
-            right: 1030px;
             left: -190px;
             width: 60px;
             height: 60px;
@@ -265,7 +278,6 @@
             position: absolute;
             top: 190px;
             left: 1030px;
-            right: 500px;
             width: 60px;
             height: 60px;
             background-size: 100% 100%;
@@ -288,7 +300,6 @@
         .h1{
             font-size: 28px;
             color: #333;
-            letter-spacing: 0;
             text-align: center;
             line-height: 40px;
             padding-top: 90px;
@@ -332,10 +343,6 @@
             color: #999;
             letter-spacing: 0;
             line-height: 24px;
-
-           
-
-
         }
 
         .bt-blue{
@@ -366,11 +373,11 @@
 
         .img{
             background-size: 100% 100%;
-            background-image: url(youzan2.png);
+            background-image: url(youzan3.png);
             width: 615px;
             height: 439px;
             position: absolute;
-            top: 700px;
+            top: 715px;
             left: 680px;
         }
 
@@ -984,12 +991,7 @@
                             <div class="bg-logo3"></div>
                             <p class="desc">经营类目：休闲零食</p>
                         </div>
-                </div>
-          
-            
-            
+                </div>   
     </div>
-
-    
 </body>
 </html>
